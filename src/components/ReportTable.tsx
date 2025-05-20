@@ -110,26 +110,26 @@ const reportData = [
 
 const ReportTable = () => {
   return (
-    <div className="rounded-md border overflow-hidden">
+    <div className="rounded-md border overflow-hidden w-full">
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow className="bg-blue-900 text-white whitespace-nowrap">
-              <TableHead className="text-white border-r border-blue-800 py-3 text-lg px-2">Cycle No</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Start Time</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Total Energy KWh</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Vibro Charging</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Spectrometer Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">ATAS Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Chemical Correction</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Pyrometer Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Deslaging</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Tapping</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Melting</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Temperature °C</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">Weight Kg</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2">End Time</TableHead>
-              <TableHead className="text-white text-lg px-2">Duration</TableHead>
+              <TableHead className="text-white border-r border-blue-800 py-3 text-lg px-2 text-center">Cycle No</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Start Time</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Total Energy KWh</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Vibro Charging</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Spectrometer Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">ATAS Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Chemical Correction</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Pyrometer Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Deslaging</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Tapping</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Melting</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Temperature °C</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Weight Kg</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">End Time</TableHead>
+              <TableHead className="text-white text-lg px-2 text-center">Duration</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -137,8 +137,8 @@ const ReportTable = () => {
               <TableRow key={row.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                 <TableCell className="font-medium border-r text-lg px-2">{row.id}</TableCell>
                 <TableCell className="border-r text-lg px-2">
-                  <div>{row.startTime.date}</div>
-                  <div>{row.startTime.time}</div>
+                  <div className="text-center">{row.startTime.date}</div>
+                  <div className="text-center">{row.startTime.time}</div>
                 </TableCell>
                 <TableCell className="border-r text-center text-lg px-2">{row.totalEnergy}</TableCell>
                 <TableCell className="border-r text-center text-lg px-2">{row.vibroCharging}</TableCell>
@@ -164,8 +164,8 @@ const ReportTable = () => {
                 <TableCell className="border-r text-center text-lg px-2">{row.temperature}</TableCell>
                 <TableCell className="border-r text-center text-lg px-2">{row.weight}</TableCell>
                 <TableCell className="border-r text-lg px-2">
-                  <div>{row.endTime.date}</div>
-                  <div>{row.endTime.time}</div>
+                  <div className="text-center">{row.endTime.date}</div>
+                  <div className="text-center">{row.endTime.time}</div>
                 </TableCell>
                 <TableCell className="text-center text-lg px-2">{row.duration}</TableCell>
               </TableRow>

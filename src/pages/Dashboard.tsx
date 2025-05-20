@@ -7,14 +7,14 @@ import ReportTable from "@/components/ReportTable";
 
 const Dashboard = () => {
   return (
-    <div className="bg-white overflow-hidden">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+    <div className="bg-white min-h-screen overflow-hidden">
+      <div className="flex max-md:flex-col max-md:items-stretch">
         <Sidebar />
-        <div className="w-[84%] ml-5 max-md:w-full max-md:ml-0">
-          <div className="flex w-full flex-col items-stretch mt-3 max-md:max-w-full">
+        <div className="flex-1 ml-5 max-md:ml-0">
+          <div className="flex flex-col h-full max-md:max-w-full">
             <Header />
-            <div className="border bg-[#EEE] shrink-0 h-px mt-[11px] border-[rgba(238,238,238,1)] border-solid max-md:max-w-full" />
-            <div className="container mx-auto px-4 py-6 max-w-full">
+            <div className="border bg-[#EEE] shrink-0 h-px mt-[11px] border-[rgba(238,238,238,1)]" />
+            <div className="container px-4 py-6 mx-auto max-w-full overflow-x-auto">
               <ReportControls />
               <ReportTable />
             </div>
