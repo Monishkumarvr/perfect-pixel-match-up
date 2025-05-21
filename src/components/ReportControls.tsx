@@ -1,7 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue 
+} from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { CalendarIcon, RefreshCw, Download, Filter, ChevronDown } from "lucide-react";
 
@@ -18,13 +24,23 @@ const ReportControls = () => {
       
       <div className="flex items-center gap-3 mb-4">
         <div className="w-20">
-          <Select className="h-9">
-            <option>All</option>
+          <Select>
+            <SelectTrigger className="h-9">
+              <SelectValue placeholder="All" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All</SelectItem>
+            </SelectContent>
           </Select>
         </div>
         <div className="w-28">
-          <Select className="h-9">
-            <option>Furnace1</option>
+          <Select>
+            <SelectTrigger className="h-9">
+              <SelectValue placeholder="Furnace1" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="furnace1">Furnace1</SelectItem>
+            </SelectContent>
           </Select>
         </div>
         <div className="relative flex items-center w-48">
@@ -40,8 +56,13 @@ const ReportControls = () => {
         <div className="flex items-center gap-2">
           <span className="text-sm">Show</span>
           <div className="w-16">
-            <Select className="h-9">
-              <option>All</option>
+            <Select>
+              <SelectTrigger className="h-9">
+                <SelectValue placeholder="All" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All</SelectItem>
+              </SelectContent>
             </Select>
           </div>
           <span className="text-sm">entries</span>
