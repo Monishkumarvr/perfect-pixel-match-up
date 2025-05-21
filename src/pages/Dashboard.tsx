@@ -13,10 +13,12 @@ const Dashboard = () => {
         <div className="flex-1">
           <div className="flex flex-col h-full">
             <Header />
-            <div className="border bg-[#EEE] shrink-0 h-px mt-[11px] border-[rgba(238,238,238,1)]" />
-            <div className="px-4 py-6 overflow-auto">
-              <ReportControls />
-              <ReportTable />
+            <div className="border-b border-gray-200" />
+            <div className="p-6 overflow-auto">
+              <div className="max-w-[1200px]">
+                <ReportControls />
+                <ReportTable />
+              </div>
             </div>
           </div>
         </div>
