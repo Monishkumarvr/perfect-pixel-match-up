@@ -110,64 +110,64 @@ const reportData = [
 
 const ReportTable = () => {
   return (
-    <div className="rounded-md border overflow-hidden w-full">
-      <div className="overflow-x-auto">
-        <Table>
+    <div className="border rounded-md overflow-hidden w-full">
+      <div className="overflow-x-auto w-full">
+        <Table className="w-full min-w-[1000px]">
           <TableHeader>
             <TableRow className="bg-blue-900 text-white whitespace-nowrap">
-              <TableHead className="text-white border-r border-blue-800 py-3 text-lg px-2 text-center">Cycle No</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Start Time</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Total Energy KWh</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Vibro Charging</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Spectrometer Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">ATAS Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Chemical Correction</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Pyrometer Check</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Deslaging</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Tapping</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Melting</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Temperature °C</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">Weight Kg</TableHead>
-              <TableHead className="text-white border-r border-blue-800 text-lg px-2 text-center">End Time</TableHead>
-              <TableHead className="text-white text-lg px-2 text-center">Duration</TableHead>
+              <TableHead className="text-white border-r border-blue-800 py-3 text-xs px-2 text-center">Cycle No</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Start Time</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Total Energy KWh</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Vibro Charging</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Spectrometer Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">ATAS Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Chemical Correction</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Pyrometer Check</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Deslaging</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Tapping</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Melting</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Temperature °C</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">Weight Kg</TableHead>
+              <TableHead className="text-white border-r border-blue-800 text-xs px-2 text-center">End Time</TableHead>
+              <TableHead className="text-white text-xs px-2 text-center">Duration</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {reportData.map((row, index) => (
               <TableRow key={row.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                <TableCell className="font-medium border-r text-lg px-2">{row.id}</TableCell>
-                <TableCell className="border-r text-lg px-2">
+                <TableCell className="font-medium border-r text-sm px-2">{row.id}</TableCell>
+                <TableCell className="border-r text-sm px-2">
                   <div className="text-center">{row.startTime.date}</div>
                   <div className="text-center">{row.startTime.time}</div>
                 </TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.totalEnergy}</TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.vibroCharging}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.totalEnergy}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.vibroCharging}</TableCell>
                 <TableCell className="border-r text-center px-2">
-                  {row.spectrometerCheck && <CheckCircle className="h-6 w-6 mx-auto text-green-500" />}
+                  {row.spectrometerCheck && <CheckCircle className="h-4 w-4 mx-auto text-green-500" />}
                 </TableCell>
                 <TableCell className="border-r text-center px-2">
                   {row.atasCheck ? (
-                    <CheckCircle className="h-6 w-6 mx-auto text-green-500" />
+                    <CheckCircle className="h-4 w-4 mx-auto text-green-500" />
                   ) : (
-                    <X className="h-6 w-6 mx-auto text-red-500" />
+                    <X className="h-4 w-4 mx-auto text-red-500" />
                   )}
                 </TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.chemicalCorrection}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.chemicalCorrection}</TableCell>
                 <TableCell className="border-r text-center px-2">
-                  {row.pyrometerCheck && <CheckCircle className="h-6 w-6 mx-auto text-green-500" />}
+                  {row.pyrometerCheck && <CheckCircle className="h-4 w-4 mx-auto text-green-500" />}
                 </TableCell>
                 <TableCell className="border-r text-center px-2">
-                  {row.deslaging && <CheckCircle className="h-6 w-6 mx-auto text-green-500" />}
+                  {row.deslaging && <CheckCircle className="h-4 w-4 mx-auto text-green-500" />}
                 </TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.tapping}</TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.melting}</TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.temperature}</TableCell>
-                <TableCell className="border-r text-center text-lg px-2">{row.weight}</TableCell>
-                <TableCell className="border-r text-lg px-2">
+                <TableCell className="border-r text-center text-sm px-2">{row.tapping}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.melting}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.temperature}</TableCell>
+                <TableCell className="border-r text-center text-sm px-2">{row.weight}</TableCell>
+                <TableCell className="border-r text-sm px-2">
                   <div className="text-center">{row.endTime.date}</div>
                   <div className="text-center">{row.endTime.time}</div>
                 </TableCell>
-                <TableCell className="text-center text-lg px-2">{row.duration}</TableCell>
+                <TableCell className="text-center text-sm px-2">{row.duration}</TableCell>
               </TableRow>
             ))}
           </TableBody>
