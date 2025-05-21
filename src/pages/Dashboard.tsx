@@ -7,18 +7,16 @@ import ReportTable from "@/components/ReportTable";
 
 const Dashboard = () => {
   return (
-    <div className="bg-white min-h-screen overflow-hidden">
-      <div className="flex max-md:flex-col max-md:items-stretch">
+    <div className="bg-white min-h-screen">
+      <div className="flex">
         <Sidebar />
-        <div className="flex-1">
-          <div className="flex flex-col h-full">
-            <Header />
-            <div className="border-b border-gray-200" />
-            <div className="p-6 overflow-auto">
-              <div className="max-w-[1200px]">
-                <ReportControls />
-                <ReportTable />
-              </div>
+        <div className="flex-1 overflow-hidden">
+          <Header />
+          <div className="border-b border-gray-200" />
+          <div className="p-8">
+            <div className="max-w-[1200px] mx-auto">
+              <ReportControls />
+              <ReportTable />
             </div>
           </div>
         </div>

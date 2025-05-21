@@ -8,24 +8,17 @@ import {
   SelectTrigger,
   SelectValue 
 } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
 import { CalendarIcon, RefreshCw, Download, Filter, ChevronDown } from "lucide-react";
 
 const ReportControls = () => {
   return (
-    <div className="mb-6 space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-lg font-semibold">Summary Report</h1>
-        <div className="flex items-center gap-2">
-          <Switch id="detailed-view" />
-          <label htmlFor="detailed-view" className="text-sm">View Detailed Report</label>
-        </div>
-      </div>
+    <div className="mb-6">
+      <h1 className="text-2xl font-semibold mb-6">Summary Report</h1>
       
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-20">
+      <div className="flex flex-wrap items-center gap-4 mb-6">
+        <div className="flex-shrink-0">
           <Select>
-            <SelectTrigger className="h-9">
+            <SelectTrigger className="w-24 h-10 bg-white border-gray-200">
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
@@ -33,9 +26,10 @@ const ReportControls = () => {
             </SelectContent>
           </Select>
         </div>
-        <div className="w-28">
+        
+        <div className="flex-shrink-0">
           <Select>
-            <SelectTrigger className="h-9">
+            <SelectTrigger className="w-32 h-10 bg-white border-gray-200">
               <SelectValue placeholder="Furnace1" />
             </SelectTrigger>
             <SelectContent>
@@ -43,21 +37,23 @@ const ReportControls = () => {
             </SelectContent>
           </Select>
         </div>
-        <div className="relative flex items-center w-48">
-          <Input type="text" placeholder="18/12/2023 - 19/12/2023" className="pl-8 h-9 text-sm" />
-          <CalendarIcon className="absolute left-2 h-4 w-4 text-gray-500" />
+        
+        <div className="relative flex-shrink-0">
+          <Input type="text" placeholder="18/12/2023 - 19/12/2023" className="pl-10 h-10 w-64 border-gray-200" />
+          <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
         </div>
-        <Button className="bg-blue-900 hover:bg-blue-800 text-sm h-9 px-4 py-1">
-          <Filter className="h-4 w-4 mr-1" /> Filter
+        
+        <Button className="bg-blue-800 hover:bg-blue-700 h-10 px-6">
+          <Filter className="h-5 w-5 mr-2" /> Filter
         </Button>
       </div>
       
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
-          <span className="text-sm">Show</span>
-          <div className="w-16">
+          <span>Show</span>
+          <div className="w-20">
             <Select>
-              <SelectTrigger className="h-9">
+              <SelectTrigger className="h-10 border-gray-200">
                 <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
@@ -65,30 +61,27 @@ const ReportControls = () => {
               </SelectContent>
             </Select>
           </div>
-          <span className="text-sm">entries</span>
+          <span>entries</span>
         </div>
         
         <div className="flex items-center gap-2">
-          <span className="text-sm">Search:</span>
-          <Input type="text" className="w-52 h-9 text-sm" />
+          <span>Search:</span>
+          <Input type="text" className="w-64 h-10 border-gray-200" />
         </div>
       </div>
       
-      <div className="flex gap-2 justify-end mb-4">
-        <Button variant="outline" className="bg-blue-100 border-blue-200 text-blue-700 hover:bg-blue-200 text-sm h-9">
-          <RefreshCw className="h-4 w-4 mr-1" /> Refresh
+      <div className="flex gap-3 justify-end mb-6">
+        <Button variant="outline" className="bg-blue-50 border-blue-100 text-blue-700 hover:bg-blue-100 h-10">
+          <RefreshCw className="h-5 w-5 mr-2" /> Refresh
         </Button>
-        <Button variant="outline" className="bg-green-100 border-green-200 text-green-700 hover:bg-green-200 text-sm h-9">
-          <Download className="h-4 w-4 mr-1" /> Download as Excel
-        </Button>
-        <Button variant="outline" className="bg-red-100 border-red-200 text-red-700 hover:bg-red-200 text-sm h-9">
-          <Download className="h-4 w-4 mr-1" /> Download as PDF
+        <Button variant="outline" className="bg-green-50 border-green-100 text-green-700 hover:bg-green-100 h-10">
+          <Download className="h-5 w-5 mr-2" /> Download as Excel
         </Button>
       </div>
 
-      <div className="w-24">
-        <Button variant="outline" className="bg-blue-900 text-white w-full flex justify-between items-center text-sm h-9 px-3">
-          Filter <ChevronDown className="h-4 w-4 ml-1" />
+      <div className="mb-2">
+        <Button variant="default" className="bg-blue-800 hover:bg-blue-700 text-white flex gap-2 h-10 px-6">
+          Filter <ChevronDown className="h-4 w-4" />
         </Button>
       </div>
     </div>
