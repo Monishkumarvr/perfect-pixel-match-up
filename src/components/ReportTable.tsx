@@ -21,40 +21,6 @@ const reportData = [
     duration: "53 Mins 35 Secs"
   },
   {
-    id: "SW2025011702A",
-    startTime: { date: "19-01-2025", time: "08:33:21" },
-    totalEnergy: 0,
-    vibroCharging: "1 Min 51 Secs",
-    spectrometerCheck: true,
-    atasCheck: false,
-    chemicalCorrection: "15 Secs",
-    pyrometerCheck: true,
-    deslaging: "1 Min 2 Secs",
-    tapping: "1 Min 30 Secs",
-    melting: "10 Min 39 Secs",
-    temperature: 0,
-    weight: 0,
-    endTime: { date: "19-01-2025", time: "08:48:38" },
-    duration: "15 Mins 17 Secs"
-  },
-  {
-    id: "SW2025011703A",
-    startTime: { date: "20-01-2025", time: "06:12:11" },
-    totalEnergy: 0,
-    vibroCharging: "1 Min 37 Secs",
-    spectrometerCheck: true,
-    atasCheck: false,
-    chemicalCorrection: "15 Secs",
-    pyrometerCheck: true,
-    deslaging: "59 Secs",
-    tapping: "1 Min 51 Secs",
-    melting: "14 Min 13 Secs",
-    temperature: 0,
-    weight: 0,
-    endTime: { date: "20-01-2025", time: "06:30:36" },
-    duration: "18 Mins 25 Secs"
-  },
-  {
     id: "SW2025011704A",
     startTime: { date: "21-01-2025", time: "08:40:50" },
     totalEnergy: 0,
@@ -120,7 +86,7 @@ const reportData = [
     temperature: 0,
     weight: 0,
     endTime: { date: "18-12-2023", time: "11:20:38" },
-    duration: "8 Mins 14 Secs"
+    duration: "48 Mins 14 Secs"
   },
   {
     id: "SW2023121800Z",
@@ -137,7 +103,7 @@ const reportData = [
     temperature: 0,
     weight: 0,
     endTime: { date: "18-12-2023", time: "12:57:31" },
-    duration: "8 Mins 45 Secs"
+    duration: "51 Mins 45 Secs"
   },
   {
     id: "SW2023121800B",
@@ -154,7 +120,7 @@ const reportData = [
     temperature: 0,
     weight: 0,
     endTime: { date: "18-12-2023", time: "13:06:44" },
-    duration: "4 Mins 40 Secs"
+    duration: "49 Mins 40 Secs"
   },
   {
     id: "SW2023121800L",
@@ -171,7 +137,7 @@ const reportData = [
     temperature: 0,
     weight: 0,
     endTime: { date: "18-12-2023", time: "13:15:44" },
-    duration: "7 Mins 26 Secs"
+    duration: "47 Mins 26 Secs"
   },
   {
     id: "SW2023121800S",
@@ -205,7 +171,7 @@ const reportData = [
     temperature: 0,
     weight: 0,
     endTime: { date: "18-12-2023", time: "14:14:01" },
-    duration: "8 Mins 40 Secs"
+    duration: "48 Mins 40 Secs"
   }
 ];
 
