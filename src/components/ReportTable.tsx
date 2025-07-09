@@ -1,8 +1,25 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, X } from "lucide-react";
 
-// Sample data based on the image
+// Data based on the heat cycle
 const reportData = [
+  {
+    id: "SW2025011600A",
+    startTime: { date: "16-01-2025", time: "06:34:46" },
+    totalEnergy: 0,
+    vibroCharging: "31 Secs",
+    spectrometerCheck: true,
+    atasCheck: true,
+    chemicalCorrection: "15 Secs",
+    pyrometerCheck: true,
+    deslaging: true,
+    tapping: "1 Min 29 Secs",
+    melting: "51 Mins 42 Secs",
+    temperature: 0,
+    weight: 0,
+    endTime: { date: "16-01-2025", time: "07:26:28" },
+    duration: "51 Mins 42 Secs"
+  },
   {
     id: "SW2023121800I",
     startTime: { date: "18-12-2023", time: "11:12:24" },
